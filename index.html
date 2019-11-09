@@ -75,6 +75,16 @@
             margin-bottom: 1em;
             width: 25em;
         }
+
+
+
+        #example_b:hover {
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+            -webkit-box-shadow: 0px 5px 40px -10px rgb(0, 0, 0);
+            -moz-box-shadow: 0px 5px 40px -10px rgb(0, 0, 0);
+            transition: all 0.4s ease 0s;
+            background: rgba(0, 113, 189, 0.897);
+        }
     </style>
 </head>
 
@@ -84,9 +94,9 @@
             <img src="images/fatimapoggi.jpg" alt="winner">
         </div>
 
-        <a href="http://reinadelacancion.com/conecta" class="button">Vota por Internet</a>
-        <a href="sms:+12678817118&body=fatima poggi" class="button">Vota por Texto</a>
-        <a href="tel:+1267-881-7118" class="button">Vota por Llamada</a>
+        <a href="http://reinadelacancion.com/conecta" class="button" id="example_b">Vota por Internet</a>
+        <a href="sms:+12678817118&body=fatima poggi" class="button" id="example_b">Vota por Texto</a>
+        <a href="tel:+1267-881-7118" class="button" id="example_b">Vota por Llamada</a>
 
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
