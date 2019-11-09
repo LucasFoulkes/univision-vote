@@ -95,14 +95,33 @@
         </div>
 
         <a href="http://reinadelacancion.com/conecta" class="button" id="example_b">Vota por Internet</a>
-        <a href="sms:+12678817118&body=fatima poggi" class="button" id="example_b">Vota por Texto</a>
-        <a href="tel:+1267-881-7118" class="button" id="example_b">Vota por Llamada</a>
+        <a href="sms:+12678817118&body=fatima poggi" class="button usa" id="example_b">Vota por Texto</a>
+        <a href="tel:+1267-881-7118" class="button usa" id="example_b">Vota por Llamada</a>
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-        </diFv>
+        <!-- jquery cus makes things easier -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+        <!-- get location and removes buttons -->
+        <script>
+            function ipLookUp() {
+                $.ajax('http://ip-api.com/json')
+                    .then(
+                        function success(response) {
+                            console.log(response.countryCode);
+                            if (response.countryCode !== 'US') { $(".usa").remove() }
+                        },
+
+                        function fail(data, status) {
+                            console.log('Request failed.  Returned status of',
+                                status);
+                        },
+                    );
+            }
+            ipLookUp()
+        </script>
+
+    </div>
 </body>
 
 </html>
