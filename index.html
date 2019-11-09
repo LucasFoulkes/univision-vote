@@ -17,8 +17,8 @@
     <title>Document</title>
     <style>
         .button {
-            background-color: #1c87c9;
-            border: none;
+            background-color: #093047;
+            border: 0.2em solid #1c87c9;
             color: white;
             padding: 20px 34px;
             text-align: center;
@@ -28,6 +28,7 @@
             margin: 4px 2px;
             cursor: pointer;
             display: block;
+            border-radius: 2em;
         }
 
         body {
@@ -58,7 +59,7 @@
         .container {
             width: 100%;
             position: absolute;
-            top: 35%;
+            top: 5%;
             text-align: center;
         }
 
@@ -67,11 +68,21 @@
             text-decoration: none;
             color: #ddd;
         }
+
+        img {
+            border: 0.5em solid #1c87c9;
+            border-radius: 50%;
+            margin-bottom: 1em;
+            width: 25em;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <div class="image-container">
+            <img src="images/fatimapoggi.jpg" alt="winner">
+        </div>
 
         <a href="http://reinadelacancion.com/conecta" class="button">Vota por Internet</a>
         <a href="sms:+12678817118&body=fatima poggi" class="button">Vota por Texto</a>
